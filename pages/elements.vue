@@ -3,6 +3,34 @@
 		<!-- <div>
 			<h2>accordion</h2>
 		</div> -->
+
+		<UDivider label="Icon" />
+		<div>
+			<h2>icon</h2>
+
+			<div>
+				<UIcon name="i-heroicons-light-bulb" />
+			</div>
+		</div>
+
+		<UDivider label="kbd" />
+		<div>
+			<h2>keyboard key</h2>
+
+			<div>
+				<UKbd>K</UKbd>
+				<UKbd value="K" />
+			</div>
+
+			<div>
+				<UKbd size="xs">K</UKbd>
+			</div>
+
+			<div>
+				<UKbd>{{ metaSymbol }}</UKbd>
+			</div>
+		</div>
+
 		<UDivider label="Button" />
 
 		<div>
@@ -115,3 +143,7 @@
 		<UDivider />
 	</main>
 </template>
+
+<script setup lang="ts">
+const { metaSymbol } = useShortcuts();
+</script>
