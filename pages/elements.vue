@@ -1,5 +1,3 @@
-import { UButton } from '../.nuxt/components'; import { _width } from
-'../.nuxt/tailwind.config';
 <template>
 	<main>
 		<!-- <div>
