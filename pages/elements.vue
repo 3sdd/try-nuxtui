@@ -4,6 +4,74 @@
 			<h2>accordion</h2>
 		</div> -->
 
+		<UDivider label="alert" />
+		<div>
+			<h2>alert</h2>
+
+			<div>
+				<UAlert title="アラート" color="red" />
+			</div>
+			<div>
+				<UAlert title="アラート" description="説明ですですですです" />
+			</div>
+			<div>
+				<UAlert
+					title="アラート"
+					description="説明ですですですです"
+					icon="i-heroicons-command-line"
+				/>
+			</div>
+			<div>
+				<UAlert
+					title="アラート"
+					description="説明ですですですです"
+					:avatar="{ src: '' }"
+				/>
+			</div>
+			<div>
+				<UAlert
+					:close-button="{
+						icon: 'i-heroicons-x-mark-20-solid',
+						color: 'gray',
+						variant: 'link',
+						padded: false,
+					}"
+					title="アラート"
+				/>
+			</div>
+
+			<div>
+				<UAlert
+					:actions="[
+						{ label: 'Action 1' },
+						{ variant: 'ghost', color: 'gray', label: 'action 2' },
+					]"
+					title="アラート"
+				/>
+				<UAlert
+					:actions="[
+						{ label: 'Action 1' },
+						{ variant: 'ghost', color: 'gray', label: 'action 2' },
+					]"
+					title="アラート"
+					description="説明付き"
+				/>
+			</div>
+			<div>
+				<UAlert title="タイトル <i>italic </i>">
+					<template #title="{ title }">
+						<!-- eslint-disable-next-line vue/no-v-html -->
+						<span v-html="title" />
+					</template>
+
+					<template #description>
+						you can add <b>components</b> to your app using the
+						<u>cli</u>
+					</template>
+				</UAlert>
+			</div>
+		</div>
+
 		<UDivider label="Icon" />
 		<div>
 			<h2>icon</h2>
