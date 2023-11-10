@@ -72,6 +72,64 @@
 			</div>
 		</div>
 
+		<UDivider label="select" />
+		<div>
+			<div>
+				<USelect v-model="select1" :options="selectOptions1" />
+			</div>
+			<div>
+				<USelect
+					v-model="select2"
+					:options="selectOptions2"
+					option-attribute="name"
+					value-attribute="value"
+				/>
+			</div>
+			<div>
+				<USelect
+					color="purple"
+					variant="outline"
+					:options="['o1', 'o2']"
+				/>
+				white:
+				<USelect color="white" />
+				gray:
+				<USelect color="gray" />
+			</div>
+			<div>
+				size:3xl
+				<USelect size="3xl" :options="['o1', 'o2']" />
+			</div>
+			<div>
+				<USelect
+					icon="i-heroicons-magnifying-glass-20-solid"
+					trailing-icon="i-heroicons-arrow-path-solid"
+					:options="['option1', 'option2']"
+				/>
+			</div>
+			<div>
+				<USelect disabled placeholder="placeholder" />
+			</div>
+			<div>
+				loading:
+				<USelect loading icon="i-heroicons-magnifying-glass-20-solid" />
+			</div>
+			<div>
+				<USelect>
+					<template #leading>
+						<UAvatar size="3xs" />
+					</template>
+				</USelect>
+			</div>
+			<div>
+				<USelect>
+					<template #trailing>
+						<UIcon name="i-heroicons-arrows-up-down-20-solid" />
+					</template>
+				</USelect>
+			</div>
+		</div>
+
 		<UDivider label="textarea" />
 		<div>
 			<div>
@@ -216,4 +274,24 @@ const textarea1 = ref("");
 
 const input1 = ref("");
 const input2 = ref("");
+
+const selectOptions1 = ["アメリカ", "カナダ", "メキシコ"];
+const select1 = ref(selectOptions1[0]);
+
+const selectOptions2 = [
+	{
+		name: "アメリカ",
+		value: "US",
+	},
+	{
+		name: "カナダ",
+		value: "CA",
+		disabled: true,
+	},
+	{
+		name: "メキシコ",
+		value: "MX",
+	},
+];
+const select2 = ref(selectOptions2[0]);
 </script>
