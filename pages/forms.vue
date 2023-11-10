@@ -1,5 +1,53 @@
 <template>
 	<main>
+		<UDivider label="textarea" />
+		<div>
+			<div>
+				<UTextarea v-model="textarea1" />
+			</div>
+			<div>
+				<UTextarea
+					v-model="textarea1"
+					color="indigo"
+					placeholder="placeholder"
+				/>
+			</div>
+			<div>
+				<UTextarea v-model="textarea1" variant="none" />
+			</div>
+			<div>
+				<UTextarea v-model="textarea1" variant="none" />
+			</div>
+			<div>
+				<UTextarea color="blue" />
+				<UTextarea color="white" />
+				<UTextarea color="gray" />
+			</div>
+			<div>
+				lg
+				<UTextarea size="lg" />
+			</div>
+			<div>
+				<UTextarea disabled />
+			</div>
+			<div>
+				<UTextarea :rows="1" />
+			</div>
+			<div>
+				<UTextarea
+					autoresize
+					:rows="1"
+					placeholder="Search..."
+					value="Here is an autoresize Textarea, write new lines to make the Textarea grow up..."
+				/>
+			</div>
+			<div>
+				resize
+
+				<UTextarea resize />
+			</div>
+		</div>
+
 		<UDivider label="toggle" />
 
 		<div>
@@ -91,4 +139,6 @@ const range2 = ref(0);
 const range3 = ref(0);
 
 const checkbox1 = ref(false);
+
+const textarea1 = ref("");
 </script>
