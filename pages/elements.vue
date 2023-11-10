@@ -4,6 +4,9 @@
 			<h2>accordion</h2>
 		</div> -->
 
+		<UDivider label="badge" />
+		<ElementsBadge />
+
 		<UDivider label="meter" />
 		<ElementsMeter />
 
