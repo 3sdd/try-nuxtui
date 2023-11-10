@@ -1,5 +1,77 @@
 <template>
 	<main>
+		<UDivider label="input" />
+		<div>
+			<div>
+				<UInput v-model="input1" />
+			</div>
+			<div>
+				<UInput
+					v-model="input1"
+					color="indigo"
+					variant="outline"
+					placeholder="placeholder"
+				/>
+			</div>
+			<div>
+				lg
+				<UInput size="lg" />
+			</div>
+			<div>
+				date:<UInput type="date" /> number:<UInput type="number" />
+				password: <UInput type="password" />
+			</div>
+			<div>
+				<UInput
+					icon="i-heroicons-magnifying-glass-20-solid"
+					:trailing="false"
+				/>
+
+				<UInput icon="i-heroicons-magnifying-glass-20-solid" trailing />
+			</div>
+			<div>
+				disabled
+				<UInput disabled />
+			</div>
+
+			<div>
+				loading
+				<UInput loading />
+			</div>
+			<div>
+				<UInput>
+					<template #leading>
+						<UAvatar size="3xs" />
+					</template>
+				</UInput>
+				<UInput>
+					<template #trailing>
+						<span class="text-gray-500 dark:text-gray-400 text-xs"
+							>EUR</span
+						>
+					</template>
+				</UInput>
+			</div>
+			<div>
+				<UInput
+					v-model="input2"
+					icon="i-heroicons-magnifying-glass-20-solid"
+					:ui="{ icon: { trailing: { pointer: '' } } }"
+				>
+					<template #trailing>
+						<UButton
+							v-show="input2 !== ''"
+							icon="i-heroicons-x-mark-20-solid"
+							color="gray"
+							variant="link"
+							:padded="false"
+							@click="input2 = ''"
+						/>
+					</template>
+				</UInput>
+			</div>
+		</div>
+
 		<UDivider label="textarea" />
 		<div>
 			<div>
@@ -141,4 +213,7 @@ const range3 = ref(0);
 const checkbox1 = ref(false);
 
 const textarea1 = ref("");
+
+const input1 = ref("");
+const input2 = ref("");
 </script>
