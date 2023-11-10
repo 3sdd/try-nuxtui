@@ -10,6 +10,9 @@
 			<li>
 				<NuxtLink to="/elements">elements</NuxtLink>
 			</li>
+			<li>
+				<NuxtLink to="/forms">forms</NuxtLink>
+			</li>
 		</ul>
 	</main>
 </template>
